@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./assets/stil.css">
+    <title>Maldivi</title>
+</head>
+<body>
+    <style>
+        
+
+
+.slideshow-container {
+  box-sizing:border-box;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    </style>
+    <div id="meni">
+        <ul>
+            <li><a href="pocetna.html">Home</a></li>
+            <li class="lm"><a href="lastMinute.html">Last minute ponuda!</a></li>
+            <li><a href="about.html">Kontakt</a></li>
+            <li class="lm"><a href="upit.html">Napravi rezervaciju</a></li>
+          </ul>
+    </div>
+    <div class="centar" style="margin-bottom: 100px;">
+        <img src="./assets/images/logo1.png" alt="" class="logo">
+        <p id="tekst" class="blink"> Odaberi neku od EGZOTICNIH lokacija!</p>
+        <a href="upit.html"><p class="blink" id="blink1">REZERVISI ODMAH!!!</p></a>
+    </div>
+    <div style="text-align: center;" class="nazivStrane">
+        <span>Maldivi</span>
+    </div>
+    <div class="slideshow-container">
+
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="./assets/images/maldivi1.jpg" style="width:100%">
+          <div class="text">Slika 1</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 5</div>
+          <img src="./assets/images/maldivi2.jpg" style="width:100%">
+          <div class="text">Slika 2</div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 5</div>
+          <img src="./assets/images/maldivi3.jpg" style="width:100%">
+          <div class="text">Slika 3</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="./assets/images/maldivi4.jpg" style="width:100%">
+            <div class="text">Slika 4</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="./assets/images/maldivi5.jpg" style="width:100%">
+            <div class="text">Slika 5</div>
+          </div>
+      
+        
+        <a class="prev" onclick="if (timeout_id) clearTimeout(timeout_id); timeout_id=null; plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="if (timeout_id) clearTimeout(timeout_id); timeout_id=null; plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+      
+        
+    </div>
+
+    <div class="tabCena" style="margin-top: 100px;">
+        <table>
+            <tr>
+                <th>BROJ KREVETA</th>
+                <th>CENA (7 dana)</th>
+                <th>CENA (10 dana)</th>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1700e</td>
+              <td>2100e</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2400e</td>
+                <td>2800e</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>3000e</td>
+                <td>3400e</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>3300e</td>
+                <td>3700e</td>
+            </tr>
+        </table>
+    </div>
+    <div class="uc">
+        <h2>Ukljuceno u cenu:</h2>
+        <ol>
+            <li>Prevoz avionom ekonomskom klasom</li>
+            <li>Zasebno kupatilo</li>
+            <li>Dorucak</li>
+            <li>Bazen</li>
+            <li>Teretana</li>
+        </ol>
+    </div>
+
+    <div class="about">
+        <p>Turistička agencija Lux Travel osnovana je 2013. Lux Travel poseduje licencu za Organizatora turističkih putovanja u zemlji i inostranstvu. Licenca OTP - 94/2021 kategorija A od 05.10.2021. i Garanciju putovanja. Članica je nacionalne asocijacije turističkih agencija <a href="http://www.yuta.rs/" target="_blank">YUTA</a>. Agenciju čini tim mladih i ambicioznih ljudi sa višegodišnjim iskustvom u oblasti turizma koji su u svakom trenutku posvećeni da ostvare najviše standarde i očekivanja svih klijenata.</p>
+        <p>Adresa: Bulevar Zorana Djindjica 106, Novi Beograd</p>
+        <p>Ukoliko imate dodatnih pitanja pisite nam na mail <a href = "mailto: abtqa@gmail.com">abtqa@abt.com</a>.</p>
+        <p>Ukoliko imate primedbe na nasu uslugu pisite nam na <a href = "mailto: abtcom@gmail.com">abtcom@abt.com</a>.</p>
+        <p>Pravila privatnosti mozete procitati <a href="https://www.ursa.rs/assets/uploads/responsive_filemanager/source/Informacije%20o%20zastiti%20podataka-Obrada%20podataka%20o%20kupcima_1.pdf">ovde</a>. </p>
+        <div class="vp" >
+            <a href="#meni"> <p> Vrati se na pocetak!</p></a>
+    </div>
+
+    <script>
+
+    let slideIndex = 0;
+    var timeout_id = null;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      timeout_id = setTimeout(showSlides, 4000); 
+    }
+
+
+        
+
+       
+        function plusSlides(n) {
+            showSlidess(slideIndex += n);
+        }
+
+        
+        function currentSlide(n) {
+            showSlidess(slideIndex = n);
+        }
+
+        function showSlidess(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+
+
+    
+    </script>
+</body>
+</html>

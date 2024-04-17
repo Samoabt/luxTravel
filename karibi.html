@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./assets/stil.css">
+    <title>Karibi</title>
+</head>
+<body>
+    <style>
+        .slS{
+            width: 50%;
+        }
+        
+    </style>
+    <div id="meni">
+        <ul>
+            <li><a href="pocetna.html">Home</a></li>
+            <li class="lm"><a href="lastMinute.html">Last minute ponuda!</a></li>
+            <li><a href="about.html">Kontakt</a></li>
+            <li class="lm" id="meniD"><a href="upit.html">Napravi rezervaciju</a></li>
+          </ul>
+        
+    </div>
+    <div class="centar">
+        
+        <a href="pocetna.html"><img src="./assets//images/logo1.png" alt="" class="logo"></a>
+        <a href="upit.html"><p class="blink">REZERVISI ODMAH!!!</p></a>
+    </div>
+    <div style="text-align: center;" class="nazivStrane">
+        <span>Karibi</span>
+    </div>
+    <div id="frejm">
+        <h1 style="text-align: centar;">ISLE DE FRANCE HOTEL</h1>
+        <iframe src="https://www.luxlife.rs/putovanja/hoteli/luksuzni-hotel-na-karibima-isle-de-france" style="height:80%;width:90%;" title="Iframe"></iframe>
+    </div>
+    
+    <div class="tabCena">
+        <table>
+            <tr>
+                <th>BROJ KREVETA</th>
+                <th>CENA (10 dana)</th>
+              </tr>
+            <tr>
+              <td>2</td>
+              <td>1700e</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2400e</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>3000e</td>
+            </tr>
+        </table>
+    </div>
+    <div class="uc" style="color: black;" onmouseover="mouseOver()">
+        <h2>Ukljuceno u cenu:</h2>
+        <ol >
+            <li>Prevoz avionom ekonomskom klasom</li>
+            <li>Zasebno kupatilo</li>
+            <li>Dorucak</li>
+            <li>Bazen</li>
+            <li>Teretana</li>
+        </ol>
+    </div>
+    <div class="centar" style="height: fit-content;">
+        <a href="upit.html"><p class="blink">REZERVISI ODMAH!!!</p></a>
+    </div>
+    <div>
+            <p class="opis">
+                Karibi su grupa ostrva koja se nalaze u Karipskom moru. Ova ostrva se prostiru od Floride na severu do Venecuele u Južnoj Americi na jugu.
+                Karibi se sastoje od preko 7000 ostrva. Podeljeni su u 25 teritorija koje predstavljaju nezavisne države, kolonije i protektorate.</p>
+            <img data-enlargable width="100" src="./assets//images/karibi1.jpg" alt="" style="margin-left: 20%" class="slS" id="fullScreenElement2"
+           
+            onclick="toggleFullScreen('fullScreenElement2')">
+            <p class="opis">
+                Karibe su se nazivali i "Zapadnoindijska ostrva" jer je Kristifor Kolumbo mislio da je došao do Indije kada je otkrio Ameriku.
+            
+                Kolumbovo prvo iskrcavanje na američko kopno je bilo upravo na Karibima. Karibi se sastoje od Velikih i Malih Antila i deo su Severne Amerike.
+            
+                Karibi su u istoriji poznati i po piratima.</p>
+            <img src="./assets//images/karibi3.jpg" alt="" style="margin-left: 20%;" class="slS" id="fullScreenElement2"
+           
+            onclick="toggleFullScreen('fullScreenElement2')">
+    </div>
+    
+    
+    <script>
+        function toggleFullScreen(id) {
+          document.getElementById(id).requestFullscreen()
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/stil.css">
+    <title>Rezervacija</title>
+</head>
+<body>
+    <style>
+        #p5s h1{
+            border: 2px black dotted;
+            color: rgb(2, 54, 2);
+        }
+         #p5s a{
+            border:2px solid black;
+            border-radius: 20px;
+            padding: 5px;
+            font-size: 25px;
+            color: black;
+        } 
+    </style>
+    <div id="meni">
+        <ul>
+            <li><a href="pocetna.html">Home</a></li>
+            <li class="lm"><a href="lastMinute.html">Last minute ponuda!</a></li>
+            <li><a href="about.html">Kontakt</a></li>
+            <li class="lm"><a href="upit.html">Napravi rezervaciju</a></li>
+          </ul>
+    </div>
+    <div>
+        <a href="http://www.yuta.rs/" target="_blank"><img src="./assets/images/yuta.jpg" alt="" style="position: fixed; max-width: 10%;"></a>
+    </div>
+    <div id="p5s" style="text-align: center; ">
+        <h1 id="pbb">SAMO JOS DANAS - BORA-BORA 30% POPUSTA</h1>
+        <a href="lastMinute.html"  id="pr12">Pogledaj ponudu</a>
+    </div>
+    <div class="mt">
+        <form action="uspesanUpit.html" method="" id="formular" class="container" novalidate>
+            <div id="greska"></div>
+
+        <fieldset class="form-group" id="addAff">
+            <legend>Licni podaci</legend>
+            <div class="form-group">
+                <label for="ime_prezime">Ime i prezime</label>
+                <input type="text" id="ime_prezime" name="ime_prezime" maxlength="30" class="form-control" required>
+            </div>
+            <div class="form-group" id="datRodj">
+                <label for="datum_rodjenja">Datum rodjenja</label>
+                <input type="date" id="datum_rodjenja" name="datum_rodjenja" class="form-control" required>
+                <p id="pkp"></p>
+                
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" autocomplete="off" required>
+            </div>  
+            <div class="form-group">
+                <label for="email">JMBG</label>
+                <input type="email" id="jmbg" name="jmbg" class="form-control" size="13" required>
+            </div> 
+            <div class="col-6">
+                <label>Pol</label>
+                <div class="form-check form-check-inline">
+                    <input name="pol" value="1" type="radio" id="muski" class="grupa_radio_dugmica"/><label for="muski" >Muski</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input name="pol" value="2" type="radio" id="zenski" class="grupa_radio_dugmica" /><label for="zenski">Zenski</label>
+                </div>
+                
+            </div>
+        </fieldset>
+        
+        <div id="d1">
+            
+        </div>
+        <div id="d2" style="margin-bottom: 30px;">
+            <button type="button" onclick="addCode()" id="dodaj" value="Dodaj putnika" class="btn-primary btn">Dodaj putnika</button>
+            <button type="button" onclick="removeLocation()" id="remove" value="Obrisi putnika" class="btn-primary btn">Obrisi putnika</button>
+        </div>
+        
+
+        <fieldset class="form-group">
+            <legend>Lokacija</legend>
+            <div class="row form-group" >
+                <div class="col-6" id="ceneLista">
+                    <label>Lokacija</label>
+                    <select class="form-control" v-model="dest">
+                        
+                        <option v-for="x in destinacije">
+                            {{x.naziv}}
+                        </option>
+                    
+                    </select>
+                
+                    <p style="font-weight: bold;" v-for="f in nekaFun()" :key="f.naziv">
+                        Za broj ljudi {{f.osoba}} cena je {{f.cena}} za 7 nocenja.
+                    </p>
+                            
+                        
+                
+               
+                
+                <div class="form-group">
+                    <label>Od:</label>
+                    <input type="date" id="datum_od" name="datum_od" class="form-control" required>
+                    <label for="datum_rodjenja">Do:</label>
+                    <input type="date" id="datum_do" name="datum_do" class="form-control" required>
+
+                </div>
+            </div>
+        </fieldset>
+            
+            <fieldset class="form-group">
+                <legend>Dodatak</legend>
+            <div class="row">
+                
+                <div class="col-6">
+                    
+                    <div class="form-check">
+                        <input name="kurs" id="veb" type="checkbox" class="form-check-input" value="veb"><label>Pun pansion</label>
+
+                    </div>
+                    <div class="form-check">
+                        <input name="kurs" id="an" type="checkbox" class="form-check-input" value="an"><label>Let prvom klasom</label>
+                    </div>
+                    <div class="form-check">
+                        <input name="kurs" id="st" type="checkbox" class="form-check-input" value="st"><label>Soba sa pogledom</label>
+
+                    </div>
+                </div>
+                <div>
+                    <textarea placeholder="Napisati ukoliko imate dodatnih zelja..." maxlength="100" cols="100" rows="5"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <input type="submit" class="btn-primary btn" value="POSALJI REZERVACIJU" onClick="myFunction()">
+        <input type="reset" class="btn-primary btn" id="resetuj" onClick="window.location.reload()" value="Poništi">
+        </form>
+    </div>
+    <script src="provera.js">
+   
+    
+
+        function resetFunc() {
+	        document.getElementById("formular").reset();
+            var scrollTop = function() {
+                window.scrollTo(0, 0);
+            };
+        }
+        function myFunction() {
+            window.location.href="uspesanUpit.html";
+        }
+
+        
+
+    </script>
+</body>
+</html>

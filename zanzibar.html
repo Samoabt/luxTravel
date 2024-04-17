@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="./assets/stil.css">
+    <title>Zanzibar</title>
+</head>
+<body>
+    <style>
+       .img50{
+        width: 30%;
+        
+        border: 2px solid gray;
+       }
+       #zbSl{
+        text-align: center;
+        margin-top: 30px;
+        
+       }
+    </style>
+    <div id="meni">
+        <ul>
+            <li><a href="pocetna.html">Home</a></li>
+            <li class="lm"><a href="lastMinute.html">Last minute ponuda!</a></li>
+            <li><a href="about.html">Kontakt</a></li>
+            <li class="lm"><a href="upit.html">Napravi rezervaciju</a></li>
+          </ul>
+    </div>
+    <div class="centar">
+        <img src="./assets/images/logo1.png" alt="" class="logo">
+        <p id="tekst" class="blink"> Odaberi neku od EGZOTICNIH lokacija!</p>
+        <a href="upit.html"><p class="blink" id="blink1">REZERVISI ODMAH!!!</p></a>
+    </div>
+    <div style="text-align: center;" class="nazivStrane">
+        <span>Zanzibar</span>
+    </div>
+    <div id="zbSl">
+        <div>
+          <img src="./assets/images/zanzibar1.jpg" class="img50" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+          <img src="./assets/images/zanzibar6.jpg"class="img50" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        </div>
+        <div">
+            <img src="./assets/images/zanzibar3.png" class="img50" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+            <img src="./assets/images/Zanzibar4.jpg" class="img50" onmouseover="bigImg(this)" onmouseout="normalImg(this)">
+        </div>
+    </div>
+
+    <div class="tabCena" style="margin-top: 100px;">
+        <table>
+            <tr>
+                <th>BROJ KREVETA</th>
+                <th>CENA (7 dana)</th>
+                <th colspan="2">CENA (10 dana / 14 dana)</th>
+                
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1700e</td>
+              <td>2100e</td>
+              <td>2300e</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>2400e</td>
+                <td>2800e</td>
+                <td>3000e</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>3000e</td>
+                <td>3400e</td>
+                <td>3500e</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>3300e</td>
+                <td>3700e</td>
+                <td>4000e</td>
+            </tr>
+        </table>
+    </div>
+    <div class="uc">
+        <h2>Ukljuceno u cenu:</h2>
+        <ol>
+            <li>Prevoz avionom ekonomskom klasom</li>
+            <li>Zasebno kupatilo</li>
+            <li>Dorucak</li>
+            <li>Bazen</li>
+            <li>Teretana</li>
+        </ol>
+    </div>
+
+    <div class="about">
+        <p>Turistička agencija Lux Travel osnovana je 2013. Lux Travel poseduje licencu za Organizatora turističkih putovanja u zemlji i inostranstvu. Licenca OTP - 94/2021 kategorija A od 05.10.2021. i Garanciju putovanja. Članica je nacionalne asocijacije turističkih agencija <a href="http://www.yuta.rs/" target="_blank">YUTA</a>. Agenciju čini tim mladih i ambicioznih ljudi sa višegodišnjim iskustvom u oblasti turizma koji su u svakom trenutku posvećeni da ostvare najviše standarde i očekivanja svih klijenata.</p>
+        <p>Adresa: Bulevar Zorana Djindjica 106, Novi Beograd</p>
+        <p>Ukoliko imate dodatnih pitanja pisite nam na mail <a href = "mailto: abtqa@gmail.com">abtqa@abt.com</a>.</p>
+        <p>Ukoliko imate primedbe na nasu uslugu pisite nam na <a href = "mailto: abtcom@gmail.com">abtcom@abt.com</a>.</p>
+        <p>Pravila privatnosti mozete procitati <a href="https://www.ursa.rs/assets/uploads/responsive_filemanager/source/Informacije%20o%20zastiti%20podataka-Obrada%20podataka%20o%20kupcima_1.pdf">ovde</a>. </p>
+        <div class="vp" >
+            <a href="#meni"> <p> Vrati se na pocetak!</p></a>
+        </div>
+        
+    </div>
+    <script>
+        function bigImg(x) {
+            x.style.height = "40%";
+            x.style.width = "40%";
+        }
+
+        function normalImg(x) {
+            x.style.height = "30%";
+            x.style.width = "30%";
+        }
+    </script>
+</body>
+</html>

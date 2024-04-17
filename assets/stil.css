@@ -1,0 +1,327 @@
+body {
+    background-color: blanchedalmond;
+    height: auto;
+    width: auto;
+    background-image: url("./images/nebo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#meni{
+  height: 50px;
+  position: sticky;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(58, 47, 83);
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    }
+  
+  #meni li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: solid;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+    color: yellow;
+  }
+
+  li a:focus{
+    color: aliceblue;
+  }
+
+  form{
+    margin-bottom: 10%;
+  }
+
+
+.about{
+    height: auto;
+    float: left;
+    margin-top: 20px;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(181, 199, 236); 
+    
+  }
+
+  .about p{
+    padding-right: 15%;
+    padding-left: 2%;
+  }
+
+.about a{
+  color: rgb(12, 12, 236);
+}
+
+  .logo{
+    padding: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    border-image: fill;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    max-width: 50%;
+    max-height: 50%;
+  }
+
+
+
+  #logUN{
+    max-width: 15%;
+    max-height: 15%;
+  }
+
+  .fr{
+    float: right;
+  }
+
+  #frejm{
+    height: 500px;
+
+  }
+
+  #oNama{
+    text-align: center;
+    width: 400px;
+    /*background-color: rgb(158, 157, 219);*/
+    padding-left: 35%;
+    padding-right: 50%;
+    float: right;
+  }
+
+  #v3{
+    height: 300px;
+    text-align: center;
+  }
+
+  #l{
+    text-align: center;
+  }
+
+  #gore{
+    margin-top: 50px;
+  }
+
+  .centar {
+    text-align: center;
+    margin-top: 1%;
+    height: 300px;
+    
+  }
+
+  .mt{
+    margin-top: 10%;
+  }
+
+  .desno{
+    float: right;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #tekst{
+    text-shadow: #333;
+    text-decoration: solid;
+    text-decoration-color: aqua;
+    text-decoration-style: solid;
+  }
+
+  .lm{
+    background-color: rgb(3, 3, 107);
+    color: yellow;
+   
+  }
+
+  
+
+  .radnoVreme{
+    height: fit-content;
+    width: 40%;
+    padding-right: 10%;
+    margin-left: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  #slike{
+    height: auto;
+    max-height: max-content ;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .centritajTekst{
+    text-align: center;
+    display: inline-block;
+  }
+
+  .sl{
+    height: fit-content;
+    
+    margin-left: 10px;
+    max-height:fit-content; 
+    max-width:25%;
+    display: inline;
+    float: left; 
+    margin-right: 10px;
+    
+  }
+
+  .sl:hover{
+    border: 2px solid black;
+  }
+
+  .blink{
+    animation: color-change 1s infinite;
+    font-size: 30px;
+  }
+
+
+
+  #blink1:hover{
+    border: #111 2px solid;
+  }
+
+  @keyframes color-change {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+  }
+
+  .vp{
+    
+    position: sticky;
+    color:rgb(12, 10, 150);
+    font-size: large;
+    background-color: rgb(23, 6, 98);
+    text-align: center;
+  }
+
+  .vp p:hover{
+    background-color: rgb(41, 26, 141);
+    color: antiquewhite;
+  }
+
+  .vp p{
+    color: gold;
+  }
+
+  .slk{
+    min-height: 250px;
+    min-width: 250px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: auto;
+    margin-bottom: 50px;
+  }
+
+  .gold{
+    color: gold;
+  }
+
+
+  #sl1, #sl3{
+    background-color: rgba(68, 65, 65, 0.3);
+    color: white;
+    
+  }
+
+  
+
+.opis{
+  font-size: large;
+  font-style: italic;
+  text-align: center;
+}
+
+#lokal{
+  max-width: 50%;
+  max-height: 50%;
+}
+
+#greska{
+  color: red;
+  font-size: large;
+}
+
+#inT{
+  color: wheat;
+  
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.radnoVreme table {
+  width: 100%;
+  text-align: center;
+}
+
+.aranz{
+  
+  font-size: large;
+  max-height: max-content;
+  display: inline;
+  margin-left: 13px;
+  
+}
+
+.pp{
+  border: rgb(95, 113, 196) 1px solid;
+  color: rgb(72, 36, 181);
+}
+
+#rvm{
+  float: left;
+}
+
+.uc{
+  height: fit-content;
+  width: fit-content;
+  margin-left: 30%;
+  border: 2px dotted black;
+  padding: 5px;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.tabCena table{
+  width: 30%;
+  text-align: center;
+  margin-left: 30%;
+  margin-bottom: 30px;
+}
+
+.nazivStrane{
+  margin-bottom: 70px;
+}
+
+.nazivStrane span{
+  
+    font-size: 40px;
+    font-family:cursive;
+    /*color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    background: -webkit-linear-gradient(rgb(136, 88, 79), rgb(249, 2, 2));
+    background-clip:unset;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
